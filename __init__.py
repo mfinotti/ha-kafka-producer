@@ -6,7 +6,7 @@ import logging
 from aiokafka import AIOKafkaProducer
 import voluptuous as vol
 
-from config.custom_components.custom_event_handler import CustomEventEnum
+from ..hacustomevents import CustomEventEnum
 from homeassistant.const import (
     CONF_IP_ADDRESS,
     CONF_PASSWORD,
@@ -25,7 +25,7 @@ KAFKA_PRODUCER_EVENT = "kafka_produce"
 
 _LOGGER = logging.getLogger(__name__)
 
-DOMAIN = "kafka_producer"
+DOMAIN = "ha-kafka-producer"
 
 CONF_TOPIC = "topic"
 CONF_SECURITY_PROTOCOL = "security_protocol"
